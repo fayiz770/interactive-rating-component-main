@@ -1,10 +1,20 @@
+const numbers = document.querySelectorAll('.number')
 const main = document.getElementById('main')
 let rate = 0;
 
+const checkActive = () => {
+    numbers.forEach(number => {
+        if(number.classList.contains('active')){
+            number.classList.remove('active')
+        }
+    })
+}
+
 document.addEventListener('click', (e) => {
     if(e.target.dataset.number > 0 ){
-
+        checkActive()
         rate = e.target.dataset.number
+        e.target.classList.toggle('active')
 
     }else if(e.target.id == 'button'){
         main.innerHTML = 
