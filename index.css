@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    
+    --orange: hsl(25, 97%, 53%);
+    --light-grey: hsl(217, 12%, 63%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--very-dark-blue);
+    height: 100vh;
+}
+
+.main {
+    background: var(--dark-blue);
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em;
+    margin: 0 2em;
+    border-radius: 1em;
+    color: white;
+    box-shadow: 0.01px 0.01px 0.001px gray;
+}
+
+.main-text,
+.numbers > span 
+{
+    color: var(--light-grey);
+}
+
+.numbers {
+    display: flex;
+    gap: 1em;
+}
+
+.numbers > span,
+.svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3em;
+    height: 3em;
+    background: hsl(200, 10%, 30%);
+    border-radius: 50%;
+    padding: 1em;
+}
+
+.button {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 1em;
+    color: black;
+    font-weight: bold;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: var(--orange);
+    border-radius: 2em;
+}
+
+.button:hover {
+    color: black;
+    background: white;
+}
+
+.numbers > span,
+.button {
+    cursor: pointer;
+}
+
+.numbers > span:hover {
+    background: var(--orange);
+    color: black;
+}
+
+.thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.thank-you-text {
+    color: var(--light-grey);
+    text-align: center;
+}
+
+.thank-you-rate {
+    padding: 0.2em .5em;
+    background: var(--orange);
+    border-radius: 2em;
+}
+
+@media (min-width: 768px){
+    .main-text {
+        width: 20vw;
+    }
+}
